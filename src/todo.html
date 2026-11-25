@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>할 일 목록</title>
+
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 480px;
+      margin: 40px auto;
+    }
+
+    li {
+      padding: 8px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li.done span {
+      text-decoration: line-through;
+      color: #999;
+    }
+
+    button.delete {
+      color: crimson;
+    }
+  </style>
+
+  <script src="todo.js" defer></script>
+</head>
+
+<body>
+  <h1>할 일</h1>
+
+  <form id="todo-form">
+    <input
+      id="todo-input"
+      placeholder="할 일을 입력하고 엔터"
+      autocomplete="off"
+    >
+  </form>
+
+  <ul id="todo-list"></ul>
+  <p id="count">0개 남음</p>
+</body>
+</html>
